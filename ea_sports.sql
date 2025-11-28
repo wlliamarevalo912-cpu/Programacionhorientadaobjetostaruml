@@ -38,26 +38,28 @@ CREATE TABLE `comuna_barrio` (
 --
 
 INSERT INTO `comuna_barrio` (`id_comuna`, `comuna`, `barrio`) VALUES
-(1, 'Comuna 1', 'Buenos Aires'),
-(2, 'Comuna 1', 'La Milagrosa'),
-(3, 'Comuna 2', 'Santa Cruz'),
-(4, 'Comuna 2', 'La Isla'),
-(5, 'Comuna 3', 'Manrique Central'),
-(6, 'Comuna 3', 'La Salle'),
-(7, 'Comuna 4', 'Aranjuez'),
-(8, 'Comuna 4', 'Berlín'),
-(9, 'Comuna 5', 'Castilla'),
-(10, 'Comuna 5', 'Florencia'),
-(11, 'Comuna 6', 'Doce de Octubre'),
-(12, 'Comuna 6', 'La Esperanza'),
-(13, 'Comuna 7', 'Robledo'),
-(14, 'Comuna 7', 'Córdoba'),
-(15, 'Comuna 8', 'Villa Hermosa'),
-(16, 'Comuna 8', 'El Pinal'),
-(17, 'Comuna 9', 'Buenos Aires'),
-(18, 'Comuna 10', 'La Candelaria'),
-(19, 'Comuna 11', 'Laureles'),
-(20, 'Comuna 12', 'Los Colores');
+INSERT INTO `comuna` (`id_comuna`, `nombre`, `barrio`) VALUES
+(1, 'Comuna 1', 'Altamira'),
+(2, 'Comuna 1', 'Miraflores'),
+(3, 'Comuna 2', 'El Progreso'),
+(4, 'Comuna 2', 'Las Brisas'),
+(5, 'Comuna 3', 'San Martín'),
+(6, 'Comuna 3', 'Los Pinos'),
+(7, 'Comuna 4', 'El Triunfo'),
+(8, 'Comuna 4', 'Jardín Central'),
+(9, 'Comuna 5', 'Santa María'),
+(10, 'Comuna 5', 'Las Palmas'),
+(11, 'Comuna 6', 'Altos del Norte'),
+(12, 'Comuna 6', 'Campo Verde'),
+(13, 'Comuna 7', 'Villa Nueva'),
+(14, 'Comuna 7', 'Horizontes'),
+(15, 'Comuna 8', 'San Joaquín'),
+(16, 'Comuna 8', 'Portal del Sol'),
+(17, 'Comuna 9', 'Nueva Esperanza'),
+(18, 'Comuna 10', 'Centro Histórico'),
+(19, 'Comuna 11', 'Bosques de la Villa'),
+(20, 'Comuna 12', 'Colinas del Oeste');
+
 
 -- --------------------------------------------------------
 
@@ -78,27 +80,27 @@ CREATE TABLE `consola` (
 -- Volcado de datos para la tabla `consola`
 --
 
-INSERT INTO `consola` (`id_consola`, `nombre`, `numero_serie`, `existencia_inventario`, `dir_ip`, `dir_mac`) VALUES
-(1, 'PlayStation 5', 'PS5-9348231', 12, '192.168.1.10', 'A4:B2:C3:D4:E5:01'),
-(2, 'Xbox Series X', 'XSX-2239842', 8, '192.168.1.11', 'A4:B2:C3:D4:E5:02'),
-(3, 'Nintendo Switch', 'NSW-5538271', 15, '192.168.1.12', 'A4:B2:C3:D4:E5:03'),
-(4, 'PlayStation 4', 'PS4-7643920', 5, '192.168.1.13', 'A4:B2:C3:D4:E5:04'),
-(5, 'Xbox One S', 'XOS-2348894', 7, '192.168.1.14', 'A4:B2:C3:D4:E5:05'),
-(6, 'Steam Deck', 'STD-9983241', 4, '192.168.1.15', 'A4:B2:C3:D4:E5:06'),
-(7, 'PlayStation 3', 'PS3-8834921', 3, '192.168.1.16', 'A4:B2:C3:D4:E5:07'),
-(8, 'Xbox 360', 'X360-1293847', 6, '192.168.1.17', 'A4:B2:C3:D4:E5:08'),
-(9, 'Nintendo Wii', 'WII-8392011', 2, '192.168.1.18', 'A4:B2:C3:D4:E5:09'),
-(10, 'Nintendo Wii U', 'WUU-7483921', 3, '192.168.1.19', 'A4:B2:C3:D4:E5:0A'),
-(11, 'PlayStation Vita', 'PSV-9348831', 9, '192.168.1.20', 'A4:B2:C3:D4:E5:0B'),
-(12, 'Nintendo 3DS', '3DS-2347789', 11, '192.168.1.21', 'A4:B2:C3:D4:E5:0C'),
-(13, 'PlayStation 2', 'PS2-0093847', 5, '192.168.1.22', 'A4:B2:C3:D4:E5:0D'),
-(14, 'Xbox Classic', 'XBX-8374621', 2, '192.168.1.23', 'A4:B2:C3:D4:E5:0E'),
-(15, 'GameCube', 'GMC-9982341', 3, '192.168.1.24', 'A4:B2:C3:D4:E5:0F'),
-(16, 'Sega Dreamcast', 'DCT-2239847', 1, '192.168.1.25', 'A4:B2:C3:D4:E5:10'),
-(17, 'PlayStation Portable', 'PSP-3348921', 6, '192.168.1.26', 'A4:B2:C3:D4:E5:11'),
-(18, 'Atari Flashback', 'ATF-0293847', 4, '192.168.1.27', 'A4:B2:C3:D4:E5:12'),
-(19, 'Retro Mini NES', 'RMS-8834921', 10, '192.168.1.28', 'A4:B2:C3:D4:E5:13'),
-(20, 'Retro Mini SNES', 'RMS-5530021', 8, '192.168.1.29', 'A4:B2:C3:D4:E5:14');
+INSERT INTO `equipo_juego` (`id_equipo`, `nombre`, `horas`, `nivel`, `juego`, `id_juego`) VALUES
+(1, 'Shadow Reapers', '85', 'Intermedio', 'Destiny 2', 21),
+(2, 'Nova Pulse', '140', 'Avanzado', 'Warzone 2.0', 22),
+(3, 'Dragon Core', '190', 'Experto', 'Tekken 8', 23),
+(4, 'Silver Hawks', '70', 'Intermedio', 'Roblox', 24),
+(5, 'Titan Forge', '155', 'Avanzado', 'The Division 2', 25),
+(6, 'Phantom Rush', '210', 'Experto', 'Forza Horizon 5', 26),
+(7, 'Frozen Vipers', '95', 'Intermedio', 'PUBG', 27),
+(8, 'Crimson Wave', '180', 'Avanzado', 'Dota 2', 28),
+(9, 'Storm Unit', '130', 'Avanzado', 'Battlefield V', 29),
+(10, 'Gold Serpents', '115', 'Intermedio', 'Fall Guys', 30),
+(11, 'Night Pulse', '205', 'Experto', 'Starfield', 31),
+(12, 'Cyber Lions', '145', 'Avanzado', 'Assassin\'s Creed Mirage', 32),
+(13, 'Quantum Sparks', '160', 'Avanzado', 'Gran Turismo 7', 33),
+(14, 'Iron Phoenix', '75', 'Intermedio', 'Sea of Thieves', 34),
+(15, 'Blue Horizon', '185', 'Avanzado', 'The Last of Us Part I', 35),
+(16, 'Shadow Lynx', '100', 'Intermedio', 'Far Cry 6', 36),
+(17, 'Omega Tigers', '210', 'Experto', 'God of War Ragnarök', 37),
+(18, 'Flash Storm', '155', 'Avanzado', 'Street Fighter 6', 38),
+(19, 'Retro Foxes', '90', 'Intermedio', 'Need for Speed Unbound', 39),
+(20, 'Silent Wolves', '200', 'Experto', 'Spider-Man 2', 40);
 
 -- --------------------------------------------------------
 
@@ -159,26 +161,26 @@ CREATE TABLE `equipo_juego` (
 --
 
 INSERT INTO `equipo_juego` (`id_equipo`, `nombre`, `horas`, `nivel`, `juego`, `id_juego`) VALUES
-(1, 'Team Eclipse', '90', 'Intermedio', 'Fortnite', 1),
-(2, 'Night Hunters', '130', 'Avanzado', 'Apex Legends', 10),
-(3, 'Omega Force', '200', 'Experto', 'FIFA 24', 3),
-(4, 'Iron Wolves', '75', 'Intermedio', 'Minecraft', 4),
-(5, 'Viking Squad', '140', 'Avanzado', 'Halo Infinite', 6),
-(6, 'Galaxy Riders', '180', 'Avanzado', 'GTA V', 12),
-(7, 'Crystal Breakers', '220', 'Experto', 'Valorant', 13),
-(8, 'Blue Titans', '160', 'Avanzado', 'League of Legends', 14),
-(9, 'Red Specters', '95', 'Intermedio', 'Rainbow Six Siege', 15),
-(10, 'Phantom Claw', '110', 'Intermedio', 'Mortal Kombat 11', 16),
-(11, 'Golden Knights', '210', 'Experto', 'Elden Ring', 17),
-(12, 'Cyber Shadows', '120', 'Intermedio', 'Cyberpunk 2077', 18),
-(13, 'Turbo Racers', '140', 'Avanzado', 'Mario Kart 8 Deluxe', 19),
-(14, 'Wild Flame', '70', 'Intermedio', 'Horizon Forbidden West', 20),
-(15, 'Dark Nova', '160', 'Avanzado', 'Overwatch 2', 9),
-(16, 'Steel Dragons', '100', 'Intermedio', 'Call of Duty MWII', 2),
-(17, 'Arcane Warriors', '175', 'Avanzado', 'Breath of the Wild', 7),
-(18, 'Smash Heroes', '150', 'Avanzado', 'Super Smash Bros Ultimate', 8),
-(19, 'Retro Hunters', '85', 'Intermedio', 'Rocket League', 11),
-(20, 'Silent Fury', '200', 'Experto', 'PlayStation Exclusive', 5);
+(1, 'Shadow Legends', '90', 'Intermedio', 'Fortnite', 1),
+(2, 'Black Panthers', '130', 'Avanzado', 'Apex Legends', 10),
+(3, 'Thunder Squad', '200', 'Experto', 'FIFA 24', 3),
+(4, 'Silver Lions', '75', 'Intermedio', 'Minecraft', 4),
+(5, 'Storm Breakers', '140', 'Avanzado', 'Halo Infinite', 6),
+(6, 'Nova Riders', '180', 'Avanzado', 'GTA V', 12),
+(7, 'Diamond Crushers', '220', 'Experto', 'Valorant', 13),
+(8, 'Eternal Titans', '160', 'Avanzado', 'League of Legends', 14),
+(9, 'Scarlet Phantoms', '95', 'Intermedio', 'Rainbow Six Siege', 15),
+(10, 'Night Claws', '110', 'Intermedio', 'Mortal Kombat 11', 16),
+(11, 'Royal Shields', '210', 'Experto', 'Elden Ring', 17),
+(12, 'Cyber Wolves', '120', 'Intermedio', 'Cyberpunk 2077', 18),
+(13, 'Nitro Racers', '140', 'Avanzado', 'Mario Kart 8 Deluxe', 19),
+(14, 'Blaze Horizon', '70', 'Intermedio', 'Horizon Forbidden West', 20),
+(15, 'Shadow Nova', '160', 'Avanzado', 'Overwatch 2', 9),
+(16, 'Iron Guardians', '100', 'Intermedio', 'Call of Duty MWII', 2),
+(17, 'Mystic Fighters', '175', 'Avanzado', 'Breath of the Wild', 7),
+(18, 'Smash Titans', '150', 'Avanzado', 'Super Smash Bros Ultimate', 8),
+(19, 'Retro Foxes', '85', 'Intermedio', 'Rocket League', 11),
+(20, 'Silent Storm', '200', 'Experto', 'PlayStation Exclusive', 5);
 
 -- --------------------------------------------------------
 
@@ -203,26 +205,27 @@ CREATE TABLE `juego` (
 --
 
 INSERT INTO `juego` (`id_juego`, `nombre`, `clasificacion_ESRB`, `estudio_dev`, `plataformas_disponibles`, `numero_jugadores`, `tipo`, `existencia_inventario`, `id_plataforma`) VALUES
-(1, 'Fortnite', 'T', 'Epic Games', 'PC, PS5, Xbox, Switch', '100', 'Battle Royale', 15, 1),
-(2, 'Call of Duty: Modern Warfare II', 'M', 'Infinity Ward', 'PC, PS5, Xbox', '24', 'Shooter', 10, 3),
-(3, 'FIFA 24', 'E', 'EA Sports', 'PC, PS5, Xbox, Switch', '4', 'Deportes', 20, 2),
-(4, 'Minecraft', 'E10+', 'Mojang', 'PC, PS5, Xbox, Switch', '8', 'Aventura', 18, 5),
-(5, 'God of War Ragnarok', 'M', 'Santa Monica Studio', 'PS4, PS5', '1', 'Acción', 6, 1),
-(6, 'Halo Infinite', 'T', '343 Industries', 'PC, Xbox', '16', 'Shooter', 7, 3),
-(7, 'The Legend of Zelda: Breath of the Wild', 'E10+', 'Nintendo', 'Switch', '1', 'Aventura', 9, 5),
-(8, 'Super Smash Bros Ultimate', 'E10+', 'Nintendo', 'Switch', '8', 'Lucha', 12, 5),
-(9, 'Overwatch 2', 'T', 'Blizzard', 'PC, PS, Xbox, Switch', '10', 'Shooter', 11, 4),
-(10, 'Apex Legends', 'T', 'Respawn', 'PC, PS, Xbox, Switch', '60', 'Battle Royale', 13, 3),
-(11, 'Rocket League', 'E', 'Psyonix', 'PC, PS, Xbox, Switch', '4', 'Deportes', 17, 2),
-(12, 'GTA V', 'M', 'Rockstar Games', 'PC, PS, Xbox', '30', 'Mundo Abierto', 10, 1),
-(13, 'Valorant', 'T', 'Riot Games', 'PC', '10', 'Shooter', 14, 6),
-(14, 'League of Legends', 'T', 'Riot Games', 'PC', '10', 'MOBA', 16, 6),
-(15, 'Rainbow Six Siege', 'M', 'Ubisoft', 'PC, PS, Xbox', '10', 'Shooter Táctico', 8, 2),
-(16, 'Mortal Kombat 11', 'M', 'NetherRealm Studios', 'PC, PS, Xbox, Switch', '2', 'Lucha', 9, 5),
-(17, 'Elden Ring', 'M', 'FromSoftware', 'PC, PS, Xbox', '1', 'RPG', 5, 3),
-(18, 'Cyberpunk 2077', 'M', 'CD Projekt Red', 'PC, PS, Xbox', '1', 'RPG', 7, 1),
-(19, 'Mario Kart 8 Deluxe', 'E', 'Nintendo', 'Switch', '4', 'Carreras', 12, 5),
-(20, 'Horizon Forbidden West', 'T', 'Guerrilla Games', 'PS4, PS5', '1', 'Aventura', 6, 1);
+(1, 'Starfall Arena', 'T', 'Epic Games', 'PC, PS5, Xbox, Switch', '100', 'Battle Royale', 15, 1),
+(2, 'Zero Strike: Frontline', 'M', 'Infinity Ward', 'PC, PS5, Xbox', '24', 'Shooter', 10, 3),
+(3, 'Soccer Pro 24', 'E', 'EA Sports', 'PC, PS5, Xbox, Switch', '4', 'Deportes', 20, 2),
+(4, 'CubeCraft World', 'E10+', 'Mojang', 'PC, PS5, Xbox, Switch', '8', 'Aventura', 18, 5),
+(5, 'War of the Ancients', 'M', 'Santa Monica Studio', 'PS4, PS5', '1', 'Acción', 6, 1),
+(6, 'Halo Reborn', 'T', '343 Industries', 'PC, Xbox', '16', 'Shooter', 7, 3),
+(7, 'Legends of Hyralia', 'E10+', 'Nintendo', 'Switch', '1', 'Aventura', 9, 5),
+(8, 'Super Battle Stars', 'E10+', 'Nintendo', 'Switch', '8', 'Lucha', 12, 5),
+(9, 'StrikeCore 2', 'T', 'Blizzard', 'PC, PS, Xbox, Switch', '10', 'Shooter', 11, 4),
+(10, 'Titan Arena', 'T', 'Respawn', 'PC, PS, Xbox, Switch', '60', 'Battle Royale', 13, 3),
+(11, 'Turbo Rocket League', 'E', 'Psyonix', 'PC, PS, Xbox, Switch', '4', 'Deportes', 17, 2),
+(12, 'Neon City V', 'M', 'Rockstar Games', 'PC, PS, Xbox', '30', 'Mundo Abierto', 10, 1),
+(13, 'Shadowpoint', 'T', 'Riot Games', 'PC', '10', 'Shooter', 14, 6),
+(14, 'Legends of Eternia', 'T', 'Riot Games', 'PC', '10', 'MOBA', 16, 6),
+(15, 'Tactical Siege Ops', 'M', 'Ubisoft', 'PC, PS, Xbox', '10', 'Shooter Táctico', 8, 2),
+(16, 'Ultimate Kombat X', 'M', 'NetherRealm Studios', 'PC, PS, Xbox, Switch', '2', 'Lucha', 9, 5),
+(17, 'Elder Realms', 'M', 'FromSoftware', 'PC, PS, Xbox', '1', 'RPG', 5, 3),
+(18, 'CyberCity 2099', 'M', 'CD Projekt Red', 'PC, PS, Xbox', '1', 'RPG', 7, 1),
+(19, 'Kart Masters Deluxe', 'E', 'Nintendo', 'Switch', '4', 'Carreras', 12, 5),
+(20, 'Forbidden Skies', 'T', 'Guerrilla Games', 'PS4, PS5', '1', 'Aventura', 6, 1);
+
 
 -- --------------------------------------------------------
 
@@ -242,26 +245,27 @@ CREATE TABLE `logro_trofeo` (
 --
 
 INSERT INTO `logro_trofeo` (`id_trofeo`, `nombre`, `puntos_req`, `id_juego`) VALUES
-(1, 'Explorador inicial', 50, 1),
-(2, 'Cazador experto', 120, 5),
-(3, 'Maestro estratega', 200, 3),
-(4, 'Guerrero veterano', 180, 8),
-(5, 'Coleccionista', 75, 12),
-(6, 'Velocidad máxima', 90, 4),
-(7, 'Superviviente', 160, 7),
-(8, 'Conquistador', 300, 2),
-(9, 'Investigador', 110, 10),
-(10, 'Derrotador de jefes', 250, 15),
-(11, 'Aventurero', 60, 6),
-(12, 'Sigilo perfecto', 140, 9),
-(13, 'Destructor', 220, 14),
-(14, 'Leyenda viviente', 400, 20),
-(15, 'Experto en objetos', 130, 18),
-(16, 'Domador de arenas', 170, 11),
-(17, 'Maestro del combate', 280, 3),
-(18, 'Rastreador', 95, 19),
-(19, 'Arquero letal', 150, 7),
-(20, 'Campeón supremo', 350, 13);
+(1, 'Pionero del Camino', 50, 1),
+(2, 'Cazador de Sombras', 120, 5),
+(3, 'Estratega Supremo', 200, 3),
+(4, 'Veterano de Batalla', 180, 8),
+(5, 'Recolector Maestro', 75, 12),
+(6, 'Turbo Imparable', 90, 4),
+(7, 'Resistente Absoluto', 160, 7),
+(8, 'Señor de la Conquista', 300, 2),
+(9, 'Analista Avanzado', 110, 10),
+(10, 'Destructor de Titanes', 250, 15),
+(11, 'Explorador Intrépido', 60, 6),
+(12, 'Fantasma Invisible', 140, 9),
+(13, 'Aniquilador Supremo', 220, 14),
+(14, 'Héroe Eterno', 400, 20),
+(15, 'Maestro del Inventario', 130, 18),
+(16, 'Señor de las Arenas', 170, 11),
+(17, 'Comandante del Combate', 280, 3),
+(18, 'Olfato de Acechador', 95, 19),
+(19, 'Arquero Implacable', 150, 7),
+(20, 'Campeón de Campeones', 350, 13);
+
 
 -- --------------------------------------------------------
 
@@ -280,26 +284,27 @@ CREATE TABLE `plataforma` (
 --
 
 INSERT INTO `plataforma` (`id_plataforma`, `nombre`, `marca`) VALUES
-(1, 'PlayStation 5', 'Sony'),
-(2, 'PlayStation 4', 'Sony'),
-(3, 'Xbox Series X', 'Microsoft'),
-(4, 'Xbox One', 'Microsoft'),
-(5, 'Nintendo Switch', 'Nintendo'),
-(6, 'Steam Deck', 'Valve'),
-(7, 'PlayStation 3', 'Sony'),
-(8, 'Xbox 360', 'Microsoft'),
-(9, 'Nintendo Wii', 'Nintendo'),
-(10, 'Nintendo Wii U', 'Nintendo'),
-(11, 'PlayStation Vita', 'Sony'),
-(12, 'Nintendo 3DS', 'Nintendo'),
-(13, 'PlayStation 2', 'Sony'),
-(14, 'Xbox Classic', 'Microsoft'),
-(15, 'GameCube', 'Nintendo'),
-(16, 'Sega Dreamcast', 'Sega'),
-(17, 'Atari Flashback', 'Atari'),
-(18, 'Oculus Quest 2', 'Meta'),
-(19, 'Steam Machine', 'Valve'),
-(20, 'Retro Mini NES', 'Nintendo');
+(1, 'PlayStation Nova', 'Sony'),
+(2, 'PlayStation Orion', 'Sony'),
+(3, 'Xbox Titan X', 'Microsoft'),
+(4, 'Xbox Prime', 'Microsoft'),
+(5, 'Nintendo Switch Pro', 'Nintendo'),
+(6, 'Steam Deck X', 'Valve'),
+(7, 'PlayStation Legacy', 'Sony'),
+(8, 'Xbox Retro 360', 'Microsoft'),
+(9, 'Nintendo Motion', 'Nintendo'),
+(10, 'Nintendo Ultra U', 'Nintendo'),
+(11, 'PlayStation Micro', 'Sony'),
+(12, 'Nintendo 3D Plus', 'Nintendo'),
+(13, 'PlayStation Classic 2', 'Sony'),
+(14, 'Xbox Origin', 'Microsoft'),
+(15, 'Nintendo Cube X', 'Nintendo'),
+(16, 'Dreamcast Neo', 'Sega'),
+(17, 'Atari Flashback Max', 'Atari'),
+(18, 'Oculus Quest Neo', 'Meta'),
+(19, 'Steam Console Pro', 'Valve'),
+(20, 'NES Ret
+
 
 -- --------------------------------------------------------
 
@@ -398,26 +403,27 @@ CREATE TABLE `tipo_usuario` (
 --
 
 INSERT INTO `tipo_usuario` (`id_tipo`, `nombre`, `descripcion`) VALUES
-(1, 'Administrador', 'Acceso total al sistema y gestión completa'),
-(2, 'Instructor', 'Encargado de guiar y supervisar actividades'),
-(3, 'Jugador', 'Participa en sesiones y competencias'),
-(4, 'Analista', 'Revisa datos y genera informes'),
-(5, 'Operador', 'Gestiona tareas operativas básicas'),
-(6, 'Invitado', 'Acceso limitado solo para consulta'),
-(7, 'Supervisor', 'Verifica el cumplimiento de procesos'),
-(8, 'Coordinador', 'Organiza y administra áreas del sistema'),
-(9, 'Asistente', 'Apoya procesos administrativos'),
-(10, 'Coach', 'Entrena y acompaña a los jugadores'),
-(11, 'Técnico', 'Realiza mantenimiento y soporte'),
-(12, 'Soporte', 'Atiende fallas y solicitudes de usuarios'),
-(13, 'Auditor', 'Revisa y valida información del sistema'),
-(14, 'Gestor', 'Administra recursos y actividades'),
-(15, 'Editor', 'Modifica ciertos contenidos del sistema'),
-(16, 'Visualizador', 'Puede ver datos pero no modificarlos'),
-(17, 'Moderador', 'Controla la actividad de usuarios'),
-(18, 'Desarrollador', 'Gestiona cambios técnicos y funciones'),
-(19, 'Ayudante', 'Apoyo general en tareas menores'),
-(20, 'Monitor', 'Supervisa sesiones o actividades específicas');
+(1, 'Director Genera', 'Máxima autoridad del sistema con control total'),
+(2, 'Profesor', 'Encargado de impartir formación y orientar procesos'),
+(3, 'Participante', 'Usuario que interviene activamente en actividades'),
+(4, 'Analista de Datos', 'Procesa información y crea reportes avanzados'),
+(5, 'Operador Logístico', 'Maneja procesos básicos y apoyo operativo'),
+(6, 'Visitante', 'Solo puede visualizar información genera'),
+(7, 'Supervisor Senior', 'Controla procedimientos y cumplimiento de normas'),
+(8, 'Coordinador Principal', 'Administra áreas y gestiona equipos de trabajo'),
+(9, 'Asistente Administrativo', 'Apoya tareas organizativas y documentales'),
+(10, 'Entrenador Profesional', 'Forma y prepara a los usuarios en sus sesiones'),
+(11, 'Técnico Especializado', 'Realiza soporte técnico y mantenimiento'),
+(12, 'Soporte Técnico', 'Atiende casos de fallas y solicitudes'),
+(13, 'Auditor Interno', 'Valida procesos y revisa la veracidad de datos'),
+(14, 'Gestor de Proyectos', 'Planifica, organiza y ejecuta actividades'),
+(15, 'Editor de Contenido', 'Actualiza y modifica material autorizado'),
+(16, 'Observador', 'Solo puede visualizar informes y datos'),
+(17, 'Moderador de Comunidad', 'Regula interacciones entre usuarios'),
+(18, 'Ingeniero de Software', 'Implementa cambios técnicos y nuevas funciones'),
+(19, 'Auxiliar', 'Brinda apoyo genera a las diferentes áreas'),
+(20, 'Monitor de Actividades', 'Supervisa sesiones operativas en tiempo real');
+
 
 -- --------------------------------------------------------
 
@@ -449,26 +455,22 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_usuario`, `tipo_documento`, `numero_documento`, `primer_nombre`, `segundo_nombre`, `primer_apellido`, `segundo_apellido`, `fecha_nacimiento`, `sexo`, `direccion_domicilio`, `nickname`, `clave`, `acudiente`, `id_comuna`, `id_tipo`, `id_equipo`) VALUES
-(1, 'CC', '1023456789', 'Juan', 'Carlos', '', NULL, '2001-05-12 00:00:00', 'M', 'Calle 10 #12-30', 'JuanC01', 'clave123', 0, 1, 3, 5),
-(2, 'TI', '1198765432', 'Ana', 'Lucia', '', NULL, '2004-09-20 00:00:00', 'F', 'Carrera 21 #8-15', 'AnaLu04', 'pass321', 0, 2, 5, 7),
-(3, 'CC', '1002938746', 'Pedro', 'Andres', '', NULL, '1998-12-01 00:00:00', 'M', 'Calle 45 #33-20', 'PAnd98', '12345', 0, 3, 2, 10),
-(4, 'CE', '900123456', 'Laura', 'Marcela', '', NULL, '2000-04-11 00:00:00', 'F', 'Diagonal 12 #7-28', 'LauM00', 'LM2000', 0, 4, 7, 3),
-(5, 'CC', '1034875621', 'Carlos', 'Eduardo', '', NULL, '1997-07-15 00:00:00', 'M', 'Transversal 5 #22-18', 'CarlE97', 'passCE', 0, 5, 1, 8),
-(6, 'TI', '1183457623', 'Sara', 'Daniela', '', NULL, '2005-02-28 00:00:00', 'F', 'Calle 80 #30-10', 'SaraD05', 'SD0505', 0, 6, 4, 12),
-(7, 'CC', '1012345678', 'Mateo', 'Javier', '', NULL, '1999-11-30 00:00:00', 'M', 'Calle 15 #14-25', 'MateJ99', 'mj1999', 0, 7, 6, 4),
-(8, 'CC', '1009283746', 'Camila', 'Isabel', '', NULL, '2002-06-06 00:00:00', 'F', 'Avenida 32 #19-02', 'CamiI02', 'ci2002', 0, 8, 8, 6),
-(9, 'CC', '1039874562', 'Daniel', 'Felipe', '', NULL, '2001-10-01 00:00:00', 'M', 'Carrera 18 #25-14', 'DF2001', 'danf2001', 0, 9, 9, 3),
-(10, 'CC', '1023489756', 'Isabella', 'Marie', '', NULL, '2003-03-10 00:00:00', 'F', 'Calle 22 #15-05', 'IsaM03', 'im0303', 0, 10, 10, 15),
-(11, 'TI', '1192876543', 'Samuel', 'David', '', NULL, '2004-08-21 00:00:00', 'M', 'Carrera 44 #19-40', 'SamD04', 'sd2004', 0, 11, 11, 11),
-(12, 'CE', '900837465', 'Valentina', 'Sofia', '', NULL, '2000-01-19 00:00:00', 'F', 'Calle 55 #7-12', 'ValeS00', 'vs2000', 0, 12, 12, 9),
-(13, 'CC', '1019384756', 'Esteban', 'Mateo', '', NULL, '1999-09-30 00:00:00', 'M', 'Carrera 90 #45-33', 'EstM99', 'em9909', 0, 13, 13, 14),
-(14, 'TI', '1189273645', 'Daniela', 'Alejandra', '', NULL, '2005-11-09 00:00:00', 'F', 'Calle 6 #12-07', 'DanA05', 'da0505', 0, 14, 14, 20),
-(15, 'CC', '1028374659', 'Jorge', 'Luis', '', NULL, '1998-05-22 00:00:00', 'M', 'Carrera 30 #4-19', 'JorL98', 'jl1998', 0, 15, 15, 17),
-(16, 'CE', '900192837', 'Mariana', 'Paola', '', NULL, '2001-04-17 00:00:00', 'F', 'Calle 3 #15-17', 'MariP01', 'mp0101', 0, 16, 16, 4),
-(17, 'CC', '1037462918', 'Sebastian', 'Andres', '', NULL, '1997-12-12 00:00:00', 'M', 'Avenida 45 #10-22', 'SebA97', 'sa9712', 0, 17, 17, 7),
-(18, 'TI', '1187364529', 'Lucia', 'Carolina', '', NULL, '2004-10-30 00:00:00', 'F', 'Calle 23 #18-08', 'LuciC04', 'lc0410', 0, 18, 18, 13),
-(19, 'CC', '1023648597', 'Felipe', 'Arturo', '', NULL, '1998-02-14 00:00:00', 'M', 'Carrera 12 #10-55', 'FelA98', 'fa9802', 0, 19, 19, 2),
-(20, 'CC', '1039487653', 'Adriana', 'Nicole', '', NULL, '2002-07-27 00:00:00', 'F', 'Calle 9 #22-11', 'AdriN02', 'an0207', 0, 20, 20, 19);
+(1, 'CC', '1029981123', 'Mario', 'Esteban', '', NULL, '2001-05-12 00:00:00', 'M', 'Calle 18 #10-21', 'MarEst01', 'mkpass01', 0, 1, 3, 5),
+(2, 'TI', '1195547821', 'Luciana', 'Fernanda', '', NULL, '2004-09-20 00:00:00', 'F', 'Carrera 15 #6-22', 'LuciF04', 'lf0420', 0, 2, 5, 7),
+(3, 'CC', '1007123945', 'Diego', 'Alonso', '', NULL, '1998-12-01 00:00:00', 'M', 'Calle 50 #20-14', 'DieA98', 'dieg123', 0, 3, 2, 10),
+(4, 'CE', '900445612', 'Juliana', 'Rocio', '', NULL, '2000-04-11 00:00:00', 'F', 'Diagonal 25 #8-19', 'JuliR00', 'jr2000', 0, 4, 7, 3),
+(5, 'CC', '1036654981', 'Mauricio', 'Ivan', '', NULL, '1997-07-15 00:00:00', 'M', 'Transversal 8 #30-09', 'Mauri97', 'mi9797', 0, 5, 1, 8),
+(6, 'TI', '1189023344', 'Vanessa', 'Lorena', '', NULL, '2005-02-28 00:00:00', 'F', 'Calle 70 #31-20', 'VaneL05', 'vl0502', 0, 6, 4, 12),
+(7, 'CC', '1015567821', 'Oscar', 'Johan', '', NULL, '1999-11-30 00:00:00', 'M', 'Calle 19 #17-38', 'OscJ99', 'oj9930', 0, 7, 6, 4),
+(8, 'CC', '1006654432', 'Daniela', 'Patricia', '', NULL, '2002-06-06 00:00:00', 'F', 'Avenida 28 #12-03', 'DaniP02', 'dp2002', 0, 8, 8, 6),
+(9, 'CC', '1032209876', 'Alex', 'Mauricio', '', NULL, '2001-10-01 00:00:00', 'M', 'Carrera 12 #20-40', 'AlexM01', 'am2001', 0, 9, 9, 3),
+(10, 'CC', '1024412398', 'Sofia', 'Valerie', '', NULL, '2003-03-10 00:00:00', 'F', 'Calle 17 #16-21', 'SofiV03', 'sv0310', 0, 10, 10, 15),
+(11, 'TI', '1191129834', 'Cristian', 'Hernan', '', NULL, '2004-08-21 00:00:00', 'M', 'Carrera 40 #10-28', 'CrisH04', 'ch2004', 0, 11, 11, 11),
+(12, 'CE', '900234891', 'Mariana', 'Lucero', '', NULL, '2000-01-19 00:00:00', 'F', 'Calle 48 #9-12', 'MariL00', 'ml2000', 0, 12, 12, 9),
+(13, 'CC', '1017089456', 'Adrian', 'Samuel', '', NULL, '1999-09-30 00:00:00', 'M', 'Carrera 72 #41-11', 'AdriS99', 'as9999', 0, 13, 13, 14),
+(14, 'TI', '1187210983', 'Carolina', 'Jazmin', '', NULL, '2005-11-09 00:00:00', 'F', 'Calle 4 #20-10', 'CaroJ05', 'cj0505', 0, 14, 14, 20),
+(15, 'CC', '1021187654', 'Ricardo', 'Miguel', '', NULL, '1998-05-22 00:00:00', 'M', 'Carrera 18 #3-11', 'RicM98', 'rm
+
 
 --
 -- Índices para tablas volcadas
